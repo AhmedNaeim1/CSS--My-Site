@@ -9,11 +9,11 @@
   </head>
 
   <!-- Command / makes sth a comment directly -->
-  
+
   <body>
     <div class="top-container">
-  
-      <p class="Name"> <img class="Profile_image"  src="images/me.jpeg" alt="" height="500" width="800">    Ahmed Naeim.</p>
+      <img class="Profile_image"  src="images/me.jpeg" alt="" height="800" width="800">
+      <p class="Name">Ahmed Naeim</p>
       <p>a Flutter App Developer</p>
        </div>
     
@@ -23,16 +23,22 @@
         <p>I am currently an application developer and working now to be a web developer too.</p>
       </div>
       <hr>
+      <div class="About-Me">
+        <h2>About Me</h2>
+<h6 class="Age">Age: 20</h6>
+<h6 class="Email">Email: v-ibahmed@microsoft.com</h6>
+<h6 class="Location">Location: Cairo,Egypt</h6>
+      </div>
       <div class="skills">
         <h2>My Skills.</h2>
         <div class="skill-row">
           <img class="first_image" src="images/tools-and-utensils.png" alt="">
-          <h3>Programmer</h3>
+          <h3 class="skill1">Programmer</h3>
           <p class="description_skill">I studied python and C++ and did multiple projects using them.</p>
         </div>
         <div class="skill-row">
           <img class="second_image" src="images/mobile-app.png" alt="">
-          <h3>App Developer</h3>
+          <h3 class="skill2">App Developer</h3>
           <p class="description_2skill">I am an experience application developer using flutter.</p>
         </div>
       </div>
@@ -46,12 +52,42 @@
         <a class="btn" href="mailto:ahmednaeim30@gmail.com">CONTACT ME</a>
       </div>
     </div>
+    <br>
+    <a class="btn" href="edit.html">Edit</a>
 
 
     <div class="bottom-container">
       <a class="footer-link" href="https://www.linkedin.com/in/ahmed-naeim-b03285192/">LinkedIn</a>
       <p class="copyright">© 2022 Ahmed Naeim.</p>
     </div>
+   
+    <script>
+      localStorage.setItem("Age", document.querySelector(".Age").innerHTML.split(": ")[1]);
+      localStorage.setItem("Name", document.querySelector(".Name").innerText);
+      localStorage.setItem("Email", document.querySelector(".Email").innerHTML.split(": ")[1]);
+      localStorage.setItem("Location", document.querySelector(".Location").innerHTML.split(": ")[1]);
+      if(localStorage.getItem("EditedAge")==null){
 
+      }else{
+
+      
+      document.querySelector(".Age").innerHTML="Age: "+localStorage.getItem("EditedAge");}
+      if(localStorage.getItem("EditedEmail")==null){
+}else{
+  document.querySelector(".Email").innerHTML="Email: "+localStorage.getItem("EditedEmail");
+}
+if(localStorage.getItem("EditedName")==null){
+}else{ document.querySelector(".Name").innerText=localStorage.getItem("EditedName");
+}
+
+if(localStorage.getItem("EditedLocation")==null){
+}else{ 
+      document.querySelector(".Location").innerHTML="Location: "+localStorage.getItem("EditedLocation");
+}
+     
+  </script>  
   </body>
+  <footer>
+    
+</footer>
 </html>

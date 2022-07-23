@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NEMO</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" href="favicon (1).ico">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@200&family=Sacramento&display=swap" rel="stylesheet">
+       
+      </head>
+    
+    <body>
+        <form class="form" action="/Users/tamerhamdy/Downloads/Ahmed/Web Development Course/Projects/CSS- My Site/index.html">
+            <label for="Name">
+            Name
+            </label>
+            <br>
+            
+            <input class="NameInput"type="text"
+            id="Name">
+            <br>
+            <br>
+            <label for="Age">
+                Age
+                </label>
+                <br>
+               
+                <input type="text"
+                id="Age">
+                <br>
+                <br>
+                <label for="Email">
+                    Email
+                    </label>
+                  
+                    <br>
+                    <input type="text"
+                    id="Email">
+                    <br>
+                
+                    <br>
+                    <label for="Location">
+                        Location
+                        </label>
+                   
+                        <br>
+                        <input type="text"
+                        id="Location">
+                        <br>
+                        <br>
+                        <button id="myButton" type="submit" class="btn btn-primary submit">Submit</button>
+                       
+
+        </form>
+
+        <script>
+          
+    document.getElementById("myButton").onclick = function () {
+        localStorage.setItem("EditedAge", document.querySelector(".form")[1].value);
+        localStorage.setItem("EditedEmail", document.querySelector(".form")[2].value); 
+        localStorage.setItem("EditedLocation", document.querySelector(".form")[3].value); 
+        localStorage.setItem("EditedName", document.querySelector(".form")[0].value);
+    };
+
+            document.querySelector(".form")[0].value=localStorage.getItem("Name");
+            document.querySelector(".form")[1].value=localStorage.getItem("Age");
+            document.querySelector(".form")[2].value=localStorage.getItem("Email");
+            document.querySelector(".form")[3].value=localStorage.getItem("Location");
+            
+            // document.querySelector(".Name").innerText=document.querySelector(".form")[0].value;
+        </script> 
+           </body>
+           <footer>
+           
+           </footer>
+   
+</html>
